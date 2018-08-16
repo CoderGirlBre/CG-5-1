@@ -15,21 +15,14 @@ namespace FullName
             string lastName = Console.ReadLine();
 
             //Prepares a spot to fill in the user's full name.
-            Console.Write("Full name: ");
-            //Calling the method.
-            Welcome(firstName);
-            Welcome(lastName);
+            Console.Write("Full name: " + Welcome(firstName, lastName));
+                       
 
             Console.ReadLine();
         }//New method.
-        private static void Welcome(string fullName)
-        {// New array created to print the first and last name with a space separating the two.
-            char[] fullNameArray = fullName.ToCharArray();
-            foreach (char item in fullNameArray)
-            {
-                Console.Write(item);
-            }
-            Console.Write(" ");
+        private static string Welcome(string firstName, string lastName)
+        {
+            return firstName + " " + lastName;
         }
     }
 }
